@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ props }) =>{
                 <Navbar.Brand>losergirltw.ink</Navbar.Brand>
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
                 <Navbar.Collapse id='basic-navbar-nav'>
-                    <Nav.Link>home</Nav.Link>
+                    <Nav.Link href='/'>home</Nav.Link>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
