@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import ErrorPage from '../error/Error';
 
 interface HeaderProps {
     props?: any;
@@ -8,7 +9,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ props }) =>{
     if(props.error) {
-        <p>error</p>
+        <ErrorPage errorMessage={"fake error message"}/>
     }
     return (
         <Navbar fixed='top' expand='lg' className='bg-body-tertiary'>
