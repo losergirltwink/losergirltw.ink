@@ -47,7 +47,6 @@ const Window: React.FC<{}> = () => {
             minHeight={150}
         >
             <div className='title-bar'>
-                {/* <span className='title-bar-icon'>icon</span> */}
                 <span className='title-bar-text'>window name</span> 
                 <span className='title-bar-controls'>
                     <button aria-label='Minimize'/>
