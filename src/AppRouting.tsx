@@ -3,14 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ErrorPage from './components/error/Error';
 import App from './App';
 
-interface AppRoutingProps {
-    props?: any;
-}
-
-const AppRouting: React.FC<AppRoutingProps> = ({ props }) => {
-    if(props.error) {
-        <ErrorPage errorMessage={'fake error message'}/>
-    }
+const AppRouting: React.FC<{}> = () => {
     return (
         <BrowserRouter>
             <Routes>

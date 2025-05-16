@@ -3,7 +3,6 @@ import './App.css';
 // import './components/header/Header.tsx';
 
 function App() {
-
   return (
     <>
       <div>

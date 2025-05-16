@@ -6,7 +6,7 @@ import AppRouting from './AppRouting.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <AppRouting props={'hi'}/>
-    <Header props={'hi'}/>
+    <AppRouting/>
+    <Header/>
   </React.StrictMode>
 );
