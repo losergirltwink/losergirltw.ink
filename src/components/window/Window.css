@@ -25,3 +25,7 @@
     display: inline-block;
     text-align: center;
 }
+
+.body {
+    padding: 5px;
+}

@@ -1,10 +1,48 @@
-import type React from 'react';
+import React from 'react';
 import './Window.css';
 import { Rnd } from 'react-rnd';
 
 const Window: React.FC<{}> = () => {
+    const [width, setWidth] = React.useState(640);
+    const [height, setHeight] = React.useState(480);
+    const rndRef = React.useRef(null);
+    
+    const updateSize = () => {
+        if(rndRef.current) {
+            const containerWidth = window.innerWidth;
+            const containerHeight = window.innerHeight;
+
+            setWidth(containerWidth*0.5);
+            setHeight(containerHeight*0.75);
+        }
+    };
+
+    React.useEffect(() => {
+        updateSize();
+
+        const handleResize = () => {
+            updateSize();
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize',handleResize);
+        };
+    }, []);
+    
+
     return (
-        <Rnd className='window' default={{ x: 0, y: 0, width: 500, height: 500 }} > {/* make x & y determined by viewport */}
+        <Rnd
+            default={{x:width,y:height,width:0,height:0}} // initial position (size does not matter)
+            className='window'
+            ref={rndRef}
+            size={{ width , height }}
+            onResizeStop={(e, direction, ref, delta, position) => {
+                setWidth(ref.offsetWidth);
+                setHeight(ref.offsetHeight);
+            }}
+        >
             <div className='header'>
                 <span className='header-item'>icon</span> {/* will be img */}
                 <span className='header-item'>window name</span> 
@@ -14,8 +52,8 @@ const Window: React.FC<{}> = () => {
                     <button className='window-control'>❌</button>
                 </span>
             </div>
-            <div>
-                <p>test</p>
+            <div className='body'>
+                <p>body content</p>
             </div>
         </Rnd>
     );
