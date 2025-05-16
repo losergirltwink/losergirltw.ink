@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import ErrorPage from '../error/Error';
+// import ErrorPage from '../error/Error';
 
 const Header: React.FC<{}> = () => {
     return (
