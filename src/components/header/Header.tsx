@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import ErrorPage from '../error/Error';
 
-const Header: React.FC<{}> = () =>{
+const Header: React.FC<{}> = () => {
     return (
         <Navbar fixed='top' expand='lg' className='bg-body-tertiary'>
             <Container>

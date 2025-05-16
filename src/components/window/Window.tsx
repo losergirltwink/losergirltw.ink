@@ -1,6 +1,7 @@
+import type React from 'react';
 import './Window.css';
 
-function Window() {
+const Window: React.FC<{}> = () => {
     return (
         <div className='window'>
             <div className='header'>
