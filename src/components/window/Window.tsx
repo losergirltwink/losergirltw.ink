@@ -1,6 +1,7 @@
 import React from 'react';
 import './Window.css';
 import { Rnd } from 'react-rnd';
+import '98.css';
 
 const Window: React.FC<{}> = () => {
     const [width, setWidth] = React.useState(640);
@@ -42,18 +43,20 @@ const Window: React.FC<{}> = () => {
                 setWidth(ref.offsetWidth);
                 setHeight(ref.offsetHeight);
             }}
+            minWidth={300}
+            minHeight={150}
         >
-            <div className='header'>
-                <span className='header-item'>icon</span> {/* will be img */}
-                <span className='header-item'>window name</span> 
-                <span className='header-controls'>
-                    <button className='window-control'>—</button>
-                    <button className='window-control'>☐</button>
-                    <button className='window-control'>❌</button>
+            <div className='title-bar'>
+                {/* <span className='title-bar-icon'>icon</span> */}
+                <span className='title-bar-text'>window name</span> 
+                <span className='title-bar-controls'>
+                    <button aria-label='Minimize'/>
+                    <button aria-label='Maximize'/>
+                    <button aria-label='Close'/>
                 </span>
             </div>
             <div className='body'>
-                <p>body content</p>
+                <p>doing a little bit of trolling</p>
             </div>
         </Rnd>
     );
