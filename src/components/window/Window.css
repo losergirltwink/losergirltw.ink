@@ -1,0 +1,20 @@
+.window {
+    background-color: white;
+}
+
+.header {
+    background-color: #000082;
+}
+
+.header-text {
+    text-align: left;
+    color: white;
+    padding-left: 5px;
+    margin: auto;
+}
+
+.header-controls {
+    color: white;
+    padding-left: 90%;
+    margin: auto;
+}

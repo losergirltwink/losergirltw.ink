@@ -7,6 +7,5 @@ import AppRouting from './AppRouting.tsx';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <AppRouting/>
-    <Header/>
   </React.StrictMode>
 );
