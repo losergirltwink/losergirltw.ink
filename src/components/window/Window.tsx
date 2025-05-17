@@ -1,9 +1,9 @@
 import React from 'react';
 import { Rnd } from 'react-rnd';
 import '98.css';
-import CloseButton from '../button/CloseButton';
-import MinimizeButton from '../button/MinimizeButton';
-import MaximizeButton from '../button/MaximizeButton';
+import CloseButton from './button/CloseButton';
+import MinimizeButton from './button/MinimizeButton';
+import MaximizeButton from './button/MaximizeButton';
 // import './Window.css';
 
 const Window: React.FC<{}> = () => {
