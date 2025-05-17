@@ -42,7 +42,7 @@ const Window: React.FC<{}> = () => {
             className='window'
             ref={rndRef}
             size={{ width , height }}
-            onResizeStop={(e, direction, ref, delta, position) => {
+            onResizeStop={(_e, _direction, ref, _delta, _position) => {
                 setWidth(ref.offsetWidth);
                 setHeight(ref.offsetHeight);
             }}
