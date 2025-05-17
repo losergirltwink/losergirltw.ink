@@ -1,6 +1,6 @@
 import type React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ErrorPage from './components/error/Error';
+import ErrorPage from './components/pages/error/Error';
 import App from './App';
 
 const AppRouting: React.FC<{}> = () => {
