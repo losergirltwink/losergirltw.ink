@@ -1,0 +1,27 @@
+/* inspriation derived from: https://fjolt.com/article/css-windows-98 */
+.start-button-items {
+    display: flex;
+    width: calc(100% - 4rem);
+}
+
+.items {
+    display: flex;
+    overflow: hidden;
+    padding: 5px 0 0 5px;
+    position: relative;
+    top: -3px;
+    height: calc(100% + -1px);
+}
+
+.start-icon {
+    margin:0;
+    display: flex;
+    width:13px;
+    height:13px;
+    padding-left:2px;
+    padding-right: 3px; 
+}
+
+.start-text {
+    padding-left: 2px;
+}
