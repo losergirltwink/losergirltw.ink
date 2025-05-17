@@ -1,5 +1,5 @@
 import React from 'react';
-import './Window.css';
+// import './Window.css';
 import { Rnd } from 'react-rnd';
 import '98.css';
 
@@ -34,7 +34,7 @@ const Window: React.FC<{}> = () => {
     
 
     return (
-        <Rnd
+        <Rnd // React: Resizable and Draggable (https://github.com/bokuweb/react-rnd)
             default={{x:width,y:height,width:0,height:0}} // initial position (size does not matter)
             className='window'
             ref={rndRef}
