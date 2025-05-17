@@ -1,8 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-// import './components/header/Header.tsx';
-
 import Window from './components/window/Window.tsx';
+import '98.css';
 
 function App() {
   return (
