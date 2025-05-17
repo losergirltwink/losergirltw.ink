@@ -1,7 +1,10 @@
 import React from 'react';
-// import './Window.css';
 import { Rnd } from 'react-rnd';
 import '98.css';
+import CloseButton from '../button/CloseButton';
+import MinimizeButton from '../button/MinimizeButton';
+import MaximizeButton from '../button/MaximizeButton';
+// import './Window.css';
 
 const Window: React.FC<{}> = () => {
     const [width, setWidth] = React.useState(640);
@@ -49,9 +52,9 @@ const Window: React.FC<{}> = () => {
             <div className='title-bar'>
                 <span className='title-bar-text'>window name</span> 
                 <span className='title-bar-controls'>
-                    <button aria-label='Minimize'/>
-                    <button aria-label='Maximize'/>
-                    <button aria-label='Close'/>
+                    <MinimizeButton/>
+                    <MaximizeButton/>
+                    <CloseButton/>
                 </span>
             </div>
             <div className='body'>
