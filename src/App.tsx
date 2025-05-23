@@ -5,7 +5,7 @@ import '98.css';
 function App() {
   return (
     <>
-      <Window/>
+      <Window windowName='hi1' windowContent='h2'/>
       <footer>
         <Taskbar/>
       </footer>

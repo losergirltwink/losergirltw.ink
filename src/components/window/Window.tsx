@@ -4,13 +4,30 @@ import '98.css';
 import CloseButton from './button/CloseButton';
 import MinimizeButton from './button/MinimizeButton';
 import MaximizeButton from './button/MaximizeButton';
+import ErrorPage from '../pages/error/Error';
 // import './Window.css';
 
-const Window: React.FC<{}> = () => {
+interface WindowProps {
+    windowName: string;
+    windowContent: string;
+}
+
+const Window: React.FC<WindowProps> = ({ windowName,windowContent }) => {
     const [width, setWidth] = React.useState(640);
     const [height, setHeight] = React.useState(480);
     const rndRef = React.useRef(null);
     
+    if(!windowName) {
+        return (
+            <ErrorPage errorMessage='no name provided to window'/>
+        );
+    }
+    if(!windowContent) {
+        return(
+            <ErrorPage errorMessage='no content provided to window'/>
+        );
+    }
+
     const updateSize = () => {
         if(rndRef.current) {
             const containerWidth = window.innerWidth;
@@ -50,7 +67,7 @@ const Window: React.FC<{}> = () => {
             minHeight={150}
         >
             <div className='title-bar'>
-                <span className='title-bar-text'>window name</span> 
+                <span className='title-bar-text'>{windowName}</span> 
                 <span className='title-bar-controls'>
                     <MinimizeButton/>
                     <MaximizeButton/>
@@ -58,7 +75,7 @@ const Window: React.FC<{}> = () => {
                 </span>
             </div>
             <div className='body'>
-                <p>doing a little bit of trolling</p>
+                <p>{windowContent}</p>
             </div>
         </Rnd>
     );
